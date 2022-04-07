@@ -3,13 +3,13 @@ import { privateKey, publicKey } from "./key-object-gen.js";
 
 export const enc = async (payload) => {
 
-  return await new jose.CompactEncrypt(
+  return await new jose.CompactSign(
       new TextEncoder().encode(
           payload
       )
   )
-      .setProtectedHeader({ alg: 'RSA-OAEP-256', enc: 'A256GCM' })
-      .encrypt(await privateKey());
+      .setProtectedHeader({ alg: "RS256" })
+      .sign(await privateKey());
 
 };
 
