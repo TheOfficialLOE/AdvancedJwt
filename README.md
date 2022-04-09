@@ -1,1 +1,2 @@
 # Advanced JWT
+This project was just some kind of playground for me to learn how to use asymmetric encryption with JWT( JWS actually). The result is a mini express application to sign and verify JWTs with an email as payload. I've already generated public and private keys for you, but you can generate your own using Openssl or online websites.
