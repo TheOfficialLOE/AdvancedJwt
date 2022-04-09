@@ -9,7 +9,7 @@ export default (req, res, next) => {
     try {
 
         dec(token).then(data => {
-            req.email = JSON.parse(data.payload);
+            req.email = JSON.parse(data.payload).email;
             next();
         }).catch(err => {
             return res.status(403).json("Invalid token...");
