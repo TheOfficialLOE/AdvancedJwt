@@ -1,5 +1,5 @@
 
-import { dec } from "./jwe.js";
+import { dec } from "./jws.js";
 
 export default (req, res, next) => {
 
